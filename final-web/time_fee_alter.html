@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>預算系統</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+
+  <link href="assets/img/school.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Muli:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!--Font awesome-->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <!-- =======================================================
+  * Template Name: Flattern - v4.2.0
+  * Template URL: https://bootstrapmade.com/flattern-multipurpose-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+<!--單位年薪預算明細-->
+
+<body>
+
+  <!--預設搜尋結果皆為專任教師的資料修改，因為在制做過程中我認為篩選可以在同一頁面執行，比較直覺。-->
+
+
+
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-flex align-items-center ">
+    <div class="container d-flex justify-content-center justify-content-md-between ">
+      <div class="contact-info d-flex align-items-center ">
+        <i class="bi bi-envelope d-flex align-items-center"><a
+            href="mailto:contact@example.com">pubwww@mail.fju.edu.tw</a></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span>(02) 29052000</span></i>
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
+
+        <a href="https://www.facebook.com/FuJenCatholicUniversity" target="blank" class="facebook"><i
+            class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/fujencatholicuniversity/?igshid=1hey6zr1zya71" target="blank"
+          class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.google.com/search?q=%E8%BC%94%E4%BB%81%E5%A4%A7%E5%AD%B8&oq=%E8%BC%94%E4%BB%81%E5%A4%A7%E5%AD%B8&aqs=chrome.0.69i59j35i39j0i433j0i131i433j0j69i61l3.6942j0j4&sourceid=chrome&ie=UTF-8"
+          target="blank" class="twitter"><i class="fab fa-google"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-between">
+
+      <div class="logo">
+        <h1 class="text-light"><a href="index-sec.html"><img src="assets/img/log.png" alt=""></a></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li class="dropdown active"><a href="accouting_picking.html"><span>單位年薪預算</span> <i
+                class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="accounting_add.html">新增教職人員</a></li>
+              <li><a href="accounting_alter.html">修改教職人員資料</a></li>
+            </ul>
+          </li>
+          <li class="dropdown active"><a href="time_fee.html"><span>鐘點費計算</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="time_fee_1.html">新增教職員鐘點費</a></li>
+              <li><a href="time_fee_2.html">修改與刪除教職員鐘點</a></li>
+            </ul>
+          </li>
+          <li><a href="LADP1.html">登出</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs 次要導覽列 ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>修改與刪除教職人員資料</h2>
+          <ol>
+            <li><a href="time_fee_2.html">回到查詢頁面</a></li>
+            <li>單位年薪預算填寫</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <style>
+      /*跳出頁面*/
+      .popup_check {
+        background: rgba(0, 0, 0, 0.6);
+        width: 80%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .popup_content {
+        width: 500px;
+        height: 250px;
+        background: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        position: relative;
+      }
+    </style>
+
+    <!-- 填寫 -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <style>
+          /*list格子*/
+          select {
+            background: #fff;
+            color: #212529;
+            width: 100%;
+            height: 3em;
+            padding: 8px;
+            position: relative;
+            border: 1px solid #ced4da;
+            border-radius: 05px;
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            background-position: right 0.5em top 50%, 0 0;
+            background-size: contain, cover;
+            background-repeat: no-repeat, repeat;
+          }
+        </style>
+
+        <style>
+          /*delete的按鈕*/
+          .buttom-delete {
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+            padding: 10px 24px;
+            border-radius: 4px;
+            transition: 0.4s;
+            margin: 10px;
+            background-color: #f03c02;
+            color: #fff;
+            -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s;
+            border: 2px solid #f03c02;
+          }
+
+          .buttom-delete:hover {
+            background: #d63e0c;
+            color: #fff;
+            text-decoration: none;
+          }
+        </style>
+
+
+        <div class="row mt-5 justify-content-center" data-aos="fade-up">
+
+          <div class="popup_check">
+            <div class="popup-content">
+              <h4 style="color: white;">確定刪除資料嗎?</h4>
+              <div><a href="time_fee_2.html" class="buttom-delete" id="del">刪除</a></div>
+              <div><a href="time_fee_alter.html" class="buttom-delete">取消</a></div>
+            </div>
+          </div>
+
+          <div class="col-lg-10">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+
+              <div class="row">
+                <div class="col-md-6 form-group mt-3">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="*****姓名******" readonly>
+                </div>
+
+                <div class="col-md-6 form-group mt-3">
+                  <input class="form-control" value="******學院學系******" readonly>
+                </div>
+
+              </div>
+
+              <div class="row">
+                <div class="col-md-6  mt-3">
+                  <input class="form-control" value="*******職稱******" readonly>
+                </div>
+                <div class="radio_choisir form-group mt-3 col-md-6">
+                  <p>&nbsp;是否為本系專任教師:&nbsp;&nbsp;
+                    <input type="radio" id="y" name="yesAndNo" checked>
+                    <label for="y">是</label>
+
+                    <input type="radio" id="n" name="yesAndNo">
+                    <label for="n">否</label>
+                  </p>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 form-group mt-3">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="*****授課科目*****"
+                    readonly>
+                </div>
+                <div class="radio_choisir form-group mt-3 col-md-6">
+                  <p>&nbsp;學期:&nbsp;&nbsp;
+                    <input type="radio" id="one" name="summe" checked>
+                    <label for="one">上學期</label>
+
+                    <input type="radio" id="two" name="summe">
+                    <label for="two">下學期</label>
+                  </p>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 form-group mt-3">
+                  <input type="text" class="form-control" name="cerdit" id="cerdit" placeholder="*******學分數*******"
+                    readonly>
+                </div>
+                <div class="col-md-6 form-group mt-3">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="****終點數(是本系學時數)****"
+                    readonly>
+                </div>
+              </div>
+
+              <style>
+                /* 單選框 */
+                .radio_choisir input[type="radio"] {
+                  display: none;
+                }
+
+                .radio_choisir input[type="radio"]+label {
+                  display: inline-block;
+                  background-color: #ccc;
+                  cursor: pointer;
+                  padding: 5px 10px;
+                  border-radius: 5px;
+                  margin: 5px;
+                }
+
+                .radio_choisir input[type="radio"]:checked+label {
+                  background-color: #f03c02;
+                  color: #fff;
+                }
+              </style>
+
+
+
+              <style>
+                /*暫時取代submit的按鈕*/
+                .button-submit {
+                  display: inline-block;
+                  padding: 10px 24px;
+                  border-radius: 4px;
+                  transition: 0.4s;
+                  margin-left: 10px;
+                  margin-right: 10px;
+                  background-color: #f03c02;
+                  color: #fff;
+                  -webkit-animation-delay: 0.8s;
+                  animation-delay: 0.8s;
+                  border: 2px solid #f03c02;
+                }
+
+                .button-submit:hover {
+                  background: #d63e0c;
+                  color: #fff;
+                  text-decoration: none;
+                }
+              </style>
+
+              <div>
+                <div class="loading">更新中</div>
+                <div class="error-message">填寫錯誤</div>
+                <div class="sent-message">更新完成</div>
+              </div>
+
+              <div class="row col-md-12">
+                <div class="col-md-3"></div>
+                <div class="text-center col-md-3 mt-4"><a href="time_fee_alter_alter.html"
+                    class="button-submit">修改資料</a></div>
+                <div class="text-center col-md-3 mt-4"><a href="##" class="button-submit" id="delete-check">刪除資料</a>
+                </div>
+                <div class="col-md-3"></div>
+
+                <script>
+
+                  document.getElementById("delete-check").addEventListener("click", function () {
+                    document.querySelector(".popup_check").style.display = "flex";
+                  })
+
+                  document.querySelector(".buttom-submit").addEventListener("click", function () {
+                    document.querySelector(".popup_check").style.display = "none";
+                  })
+
+                  document.querySelector(".buttom-submit").addEventListener("click", function () {
+                    document.querySelector(".popup_check").style.display = "none";
+                  })
+
+                </script>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 footer-contact">
+            <h3>FJCU</h3>
+            <p>
+              242062 <br>
+              新北市新莊區<br>
+              中正路510號 <br><br>
+              <strong>Phone:</strong> (02) 29052000<br>
+              <strong>Email:</strong> pubwww@mail.fju.edu.tw<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>網站連結</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.fju.edu.tw/" target="_blank">輔仁大學</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.fju.edu.tw/administration.jsp?labelID=1"
+                  target="_blank">各行政服務</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://www.hr.fju.edu.tw/" target="_blank">人事室</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://www.secretariat.fju.edu.tw/#&panel1-1"
+                  target="_blank">秘書室</a></li>
+            </ul>
+          </div>
+
+          <style>
+            .videobox {
+              position: relative;
+              width: 100%;
+              height: 0;
+              padding-bottom: 56.25%;
+            }
+
+            .videobox iframe {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            }
+
+            .videobox embed {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            }
+          </style>
+
+          <div class="col-lg-5 col-md-12 footer-newsletter">
+            <h4>輔仁大學</h4>
+            <div class="viewbox">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14459.744485496425!2d121.4323211!3d25.0362418!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe342a67d6574f896!2z5aSp5Li75pWZ6LyU5LuB5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1623482749375!5m2!1szh-TW!2stw"
+                allowfullscreen="true" loading="lazy">
+              </iframe>
+            </div>
+            <br>
+            <p>開學作息時間: 每週一～週五/日間部 08:00~12:00, 13:00~16:30 /進修部 15:00~22:00</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>FJCU</span></strong>
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flattern-multipurpose-bootstrap-template/ -->
+          Designed by <a href="http://www.im.fju.edu.tw/" target="_blank">FJUIM</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+
+        <a href="https://www.facebook.com/FuJenCatholicUniversity" target="blank" class="facebook"><i
+            class="bx bxl-facebook"></i></a>
+        <a href="https://www.instagram.com/fujencatholicuniversity/?igshid=1hey6zr1zya71" target="blank"
+          class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.google.com/search?q=%E8%BC%94%E4%BB%81%E5%A4%A7%E5%AD%B8&oq=%E8%BC%94%E4%BB%81%E5%A4%A7%E5%AD%B8&aqs=chrome.0.69i59j35i39j0i433j0i131i433j0j69i61l3.6942j0j4&sourceid=chrome&ie=UTF-8"
+          target="blank" class="google-plus"><i class="fab fa-google"></i></a>
+
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

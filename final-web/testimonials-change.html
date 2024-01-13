@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script>
+    var myModal = document.getElementById('myModal')
+    var myInput = document.getElementById('myInput')
+    myModal.addEventListener('shown.bs.modal', function () {
+    myInput.focus()
+    })
+  </script>
+
+  <style>
+    
+    .forget{
+        font-family:Roboto;
+        background-color: white ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .login{
+        background-color:white;
+        width: 800px;
+        color:black;
+        padding:40px;
+        box-shadow: 10px 10px 25px #9D9D9D;
+        text-align: center;
+    }
+
+    .login input{
+        display:block;
+        margin:20px auto;
+        text-align: center;
+        background: none;
+        padding: 15px;
+        font-size: 15px;
+        border-radius: 0px;
+        outline:none;
+        color: black;
+    }
+    .login input[type="text"],
+    .login input[type="password"]{
+        border:2px solid #eee;
+        width: 350px;
+    }
+    .login input[type="submit"]{
+        background-color: #f03c02;
+        width:100px;
+        border:2px  solid #f03c02;
+        cursor: pointer;
+        color:white ;
+        border-radius: 8px;
+        
+    }
+    .login input[type="text"]:focus,
+    .login input[type="password"]:focus{
+        border-color:#f03c02;
+        width: 430px;
+        transition: 0.5s;
+    }
+    .login input[type="submit"]:hover{
+        background-color:#f03c02;
+        transition: 0.5s;
+    }
+    </style>
+    
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Testimonials - Flattern Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/school.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Muli:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Flattern - v4.2.0
+  * Template URL: https://bootstrapmade.com/flattern-multipurpose-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
+        <a href="https://www.facebook.com/FuJenCatholicUniversity" target="blank" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/fujencatholicuniversity/?igshid=1hey6zr1zya71" target="blank"  class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.google.com/search?q=%E8%BC%94%E4%BB%81%E5%A4%A7%E5%AD%B8&oq=%E8%BC%94%E4%BB%81%E5%A4%A7%E5%AD%B8&aqs=chrome.0.69i59j35i39j0i433j0i131i433j0j69i61l3.6942j0j4&sourceid=chrome&ie=UTF-8" target="blank"  class="twitter"><i class="fab fa-google"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Header ======= -->
+  
+
+  <main id="main">
+
+
+    
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>重設密碼</h2>
+          <ol>
+            <li><a href="index.html">回首頁</a></li>
+            <li>忘記密碼</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= 忘記密碼 ======= -->
+    <section id="testimonials" class="testimonials">
+      <div class="container">
+
+        <div class="row">
+          <div class="forget"><form action=".js" class="login">   
+            <h1>Login 忘記密碼</h1>
+            <input type="text" placeholder="Email"/>
+            <input type="password"  placeholder="New password"/>
+            <input type="password" placeholder="Confirm password"/>
+            <div><p><a href="index.html"  style="color:#8E8E8E">回首頁</p></a></div>
+           
+           
+
+
+    <!-- Button  -->
+    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+     確定更改
+    </button>
+
+   <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">更改成功</h5>
+        
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        您好，
+        已更改密碼，請重新登入 !
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">OK</button>
+       
+        
+      </div>
+      </div>
+    </div>
+   </div>
+
+
+           
+
+
+
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 footer-contact">
+            <h3>FJCU</h3>
+            <p>
+              242062 <br>
+              新北市新莊區<br>
+              中正路510號 <br><br>
+              <strong>Phone:</strong> (02) 29052000<br>
+              <strong>Email:</strong> pubwww@mail.fju.edu.tw<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>網站連結</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.fju.edu.tw/" target="_blank">輔仁大學</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.fju.edu.tw/administration.jsp?labelID=1" target="_blank">各行政服務</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://www.hr.fju.edu.tw/" target="_blank">人事室</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://www.secretariat.fju.edu.tw/#&panel1-1" target="_blank">秘書室</a></li>
+            </ul>
+          </div>
+
+          <style>
+            .videobox {
+                position: relative;
+                width: 100%;
+                height: 0;
+                padding-bottom: 56.25%;
+            }
+
+            .videobox iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+            .videobox embed {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+          </style>
+
+          <div class="col-lg-5 col-md-12 footer-newsletter">
+            <h4>輔仁大學</h4>
+            <div class="viewbox">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14459.744485496425!2d121.4323211!3d25.0362418!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe342a67d6574f896!2z5aSp5Li75pWZ6LyU5LuB5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1623482749375!5m2!1szh-TW!2stw" allowfullscreen="true" loading="lazy">
+              </iframe>
+            </div>
+            <br>
+            <p>開學作息時間: 每週一～週五/日間部  08:00~12:00, 13:00~16:30 /進修部  15:00~22:00</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>FJCU</span></strong>
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flattern-multipurpose-bootstrap-template/ -->
+          Designed by <a href="http://www.im.fju.edu.tw/" target="_blank">FJUIM</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+        <a href="https://www.facebook.com/FuJenCatholicUniversity" target="blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="https://www.instagram.com/fujencatholicuniversity/?igshid=1hey6zr1zya71" target="blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.google.com/search?q=%E8%BC%94%E4%BB%81%E5%A4%A7%E5%AD%B8&oq=%E8%BC%94%E4%BB%81%E5%A4%A7%E5%AD%B8&aqs=chrome.0.69i59j35i39j0i433j0i131i433j0j69i61l3.6942j0j4&sourceid=chrome&ie=UTF-8" target="blank" class="google-plus"><i class="fab fa-google"></i></a>
+        
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

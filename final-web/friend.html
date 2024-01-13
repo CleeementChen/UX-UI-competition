@@ -1,0 +1,71 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>年度報表</title>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    // Load Charts and the corechart and barchart packages.
+    google.charts.load('current', { 'packages': ['corechart'] });
+
+    // Draw the pie chart and bar chart when Charts is loaded.
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Topping');
+      data.addColumn('number', 'Slices');
+      data.addRows([
+        ['專任職員', 276],
+        ['工友', 63],
+        ['專職約聘人', 71],
+        
+      ]);
+
+      var piechart_options = {
+        title: '兼任教學助理人數分配比例圖(共410人)',
+        width: 480,
+        height: 360
+      };
+      var piechart = new google.visualization.PieChart(document.getElementById('piechart_div'));
+      piechart.draw(data, piechart_options);
+
+      var barchart_options = {
+        title: '兼任教學助理人數分配數量圖(共410人)',
+        width: 480,
+        height: 360,
+        legend: 'none'
+      };
+      var barchart = new google.visualization.BarChart(document.getElementById('barchart_div'));
+      barchart.draw(data, barchart_options);
+    }
+   
+  </script>
+  <style>
+    .coo{
+            padding-top: 1%;
+            padding-left: 1%;
+            padding-right: 1%;
+            padding-bottom: 1%;
+    }
+  </style>
+</head>
+
+<body>
+  <!--Table and divs that hold the pie charts-->
+  <h1 align=center>專任職員/專職約聘人員/工友</h1>
+  <table class="columns coo">
+    <tr>
+      <td>
+        <div id="piechart_div" style="border: 1px solid #ccc"></div>
+      </td>
+      <td>
+        <div id="barchart_div" style="border: 1px solid #ccc"></div>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>

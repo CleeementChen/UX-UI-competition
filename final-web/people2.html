@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  
+
+  <script>
+    var myModal = document.getElementById('myModal')
+    var myInput = document.getElementById('myInput')
+
+    myModal.addEventListener('shown.bs.modal', function () {
+      myInput.focus()
+    })
+  </script>
+
+  <script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+  </script>
+
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 40px;
+      font-family: "Open Sans", sans-serif;
+    }
+
+    table {
+      width: 100%;
+      font-size: 13px;
+      color: white;
+      white-space: wrap;
+      border-collapse: collapse;
+      border-color: gray;
+
+    }
+
+    table>head th {
+      padding: auto;
+    }
+
+    table th,
+    table td {
+      border: 1px solid whitesmoke;
+      padding: auto;
+    }
+
+    table>tbody>tr>td>img {
+      display: inline-block;
+      width: auto;
+      height: auto;
+      object-fit: cover;
+      border-radius: 50%;
+
+    }
+
+
+    table>tbody>tr:nth-child(even) {
+      background-color: rgb(238, 238, 238);
+    }
+
+    table>tbody>tr:hover {
+      filter: drop-shadow(0px 2px 6px #0002);
+    }
+
+    ul.A {
+      list-style-type: decimal;
+    }
+  </style>
+
+  <style>
+    @media (max-width: 736px) {
+      .table-rwd {
+        min-width: 100%;
+      }
+
+      /*針對tr去做隱藏*/
+      tr.tr-only-hide {
+        display: none !important;
+      }
+
+      /*讓tr變成區塊主要讓他有個區塊*/
+      .table-rwd tr {
+        display: block;
+        border: 1px solid #ddd;
+        margin-top: 5px;
+      }
+
+      .table-rwd td {
+        text-align: left;
+        font-size: 15px;
+        overflow: hidden;
+        width: 100%;
+        display: block;
+      }
+
+      .table-rwd td:before {
+        /*最重要的就是這串*/
+        content: attr(data-th) " : ";
+        /*最重要的就是這串*/
+        display: inline-block;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-right: 10px;
+        color: #000000;
+      }
+
+      /*當RWD縮小的時候.table-bordered 會有兩條線，所以針對.table-bordered去做修正*/
+      .table-rwd.table-bordered td,
+      .table-rwd.table-bordered th,
+      .table-rwd.table-bordered {
+        border: 0;
+      }
+    }
+  </style>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>人事室-超鐘點判定</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/school.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Muli:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Flattern - v4.2.0
+  * Template URL: https://bootstrapmade.com/flattern-multipurpose-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style>
+    @media screen and (max-width:768px) {
+      .ccddnn {
+        width: 100%;
+      }
+
+      .ta {
+        width: 12%
+      }
+
+    }
+  </style>
+  <script>var myModal = document.getElementById('myModal')
+    var myInput = document.getElementById('myInput')
+
+    myModal.addEventListener('shown.bs.modal', function () {
+      myInput.focus()
+    })</script>
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope d-flex align-items-center"><a
+            href="mailto:contact@example.com">pubwww@mail.fju.edu.tw</a></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span>(02) 29052000</span></i>
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
+        <a href="https://www.facebook.com/FuJenCatholicUniversity" target="blank" class="facebook"><i
+            class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/fujencatholicuniversity/?igshid=1hey6zr1zya71" target="blank"
+          class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.google.com/search?q=%E8%BC%94%E4%BB%81%E5%A4%A7%E5%AD%B8&oq=%E8%BC%94%E4%BB%81%E5%A4%A7%E5%AD%B8&aqs=chrome.0.69i59j35i39j0i433j0i131i433j0j69i61l3.6942j0j4&sourceid=chrome&ie=UTF-8"
+          target="blank" class="twitter"><i class="fab fa-google"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-between">
+
+      <div class="logo">
+        <img src="assets/img/log.png"></img>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="people1.html">人事資料確認</a></li>
+          <li><a href="people2.html">兼任教師鐘點費確認</a></li>
+          <li><a href="fig.html">年度報表</a></li>
+          <li><a href="LADP2.html">登出</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+
+
+    <section id="breadcrumbs" class="breadcrumbs">
+
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>人事室-兼任教師超鐘點判定</h2>
+          <ol>
+            <li><a href="people1.html">首頁</a></li>
+            <li><a href="people1.html">上一頁</a></li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
+
+
+
+
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+
+              <!-- ======= HERE======= -->
+
+
+
+              <!-- ======= 秘書室資料 ======= -->
+
+
+              <div class="accordion-item">
+
+
+                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                  <!-- ======= 第一列 ======= -->
+                  <button style="color:tomato; font-weight: bold; font-size: 20px;" class=" accordion-button"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne"
+                    aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                    #1 資訊管理學系
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                  aria-labelledby="panelsStayOpen-headingOne">
+                  <div class="accordion-body ccddnn">
+                    <strong>109學年度下學期資料</strong><br></br>
+                    <!-- ======= 第一列表格 ======= -->
+
+                    <table class="table table-hover table-rwd">
+                      <thead>
+                        <tr class="tr-only-hide">
+                          <th scope="col">#</th>
+                          <th scope="col">姓名</th>
+                          <th scope="col">職稱</th>
+                          <th scope="col">授課科目</th>
+                          <th scope="col">學分數</th>
+                          <th scope="col">學期</th>
+                          <th scope="col">總終點數</th>
+                          <th scope="col">終點費用</th>
+                          <th scope="col">修正資料</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        </tr>
+
+                        <tr style="color: red;">
+                          <th scope="row" data-th = "#">1</th>
+                          <td data-th="姓名">陳**</td>
+                          <td data-th="職稱">助理教授</td>
+                          <td data-th="授課科目">微積分</td>
+                          <td data-th="學分數">3</td>
+                          <td data-th="學期">下學期</td>
+                          <td data-th="總終點數">**hr&nbsp;(上限16hr)</td>
+                          <td data-th="鐘點費用">*****</td>
+                          <td data-th="修正資料">
+                            <div style="height: 25px; width: 90px;" class="mb-3">
+                              <input type="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="Error...">
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th scope="row" data-th = "#">2</th>
+                          <td data-th="姓名">張**</td>
+                          <td data-th="職稱">助理教授</td>
+                          <td data-th="授課科目">程式設計</td>
+                          <td data-th="學分數">3</td>
+                          <td data-th="學期">下學期</td>
+                          <td data-th="總終點數">**hr</td>
+                          <td data-th="鐘點費用">*****</td>
+                          <td data-th="修正資料">
+                            無
+                          </td>
+                        </tr>
+
+                        <tr style="color: red;">
+                          <th scope="row" data-th = "#">3</th>
+                          <td data-th="姓名">洪**</td>
+                          <td data-th="職稱">助理教授</td>
+                          <td data-th="授課科目">會計學(一)</td>
+                          <td data-th="學分數">3</td>
+                          <td data-th="學期">下學期</td>
+                          <td data-th="總終點數">**hr&nbsp;(上限16hr)</td>
+                          <td data-th="鐘點費用">*****</td>
+                          <td data-th="修正資料">
+                            <div style="height: 30px; width: 90px;" class="mb-3">
+                              <input type="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="Error...">
+                            </div>
+                          </td>
+
+                        <tr style="color: red;">
+                          <th scope="row" data-th = "#">4</th>
+                          <td data-th="姓名">陳**</td>
+                          <td data-th="職稱">講師</td>
+                          <td data-th="授課科目">行銷管理</td>
+                          <td data-th="學分數">2</td>
+                          <td data-th="學期">下學期</td>
+                          <td data-th="總終點數">**hr&nbsp;(上限16hr)</td>
+                          <td data-th="鐘點費用">*****</td>
+                          <td data-th="修正資料">
+                            <div style="height: 30px; width: 90px;" class="mb-3">
+                              <input type="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="Error...">
+                            </div>
+                          </td>
+                        </tr>
+                        <!-- ======= 第一列(錯誤回報) ======= -->
+
+                        <table>
+                          <center>
+
+                            <p>
+                              <button class="btn  btn-success" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                查看鐘點費計算方式
+                              </button>
+                              <button type="submit" class="btn btn-primary">送出</button>
+                          </center>
+                          </p>
+                          <div class="collapse" id="collapseExample">
+                            <div class="card card-body">
+                              <span style="padding-left: 7%; padding-right: 7%;">
+                                <p style="font-weight: bold; font-size: 19px;">日間部</p>
+                                <ul>
+                                  <li>教授(專任) : 920 / 教授(兼任) : 955</li>
+                                  <li>副教授(專任) : 795 / 副教授(兼任) : 825</li>
+                                  <li>助理教授(專任) : 735 / 助理教授(兼任) : 765</li>
+                                  <li>講師(專任) : 660 / 講師(兼任) : 695</li>
+                                </ul>
+                                -------------------------------------------------------------------------------------------------------------
+
+                                <p style="font-weight: bold; font-size: 18px;">夜間部</p>
+                                <ul>
+                                  <li>教授(專任) : 950 / 教授(兼任) : 995</li>
+                                  <li>副教授(專任) : 815 / 副教授(兼任) : 850</li>
+                                  <li>助理教授(專任) : 760 / 助理教授(兼任) : 800</li>
+                                  <li>講師(專任) : 700 / 講師(兼任) : 740</li>
+                                </ul>
+                                -------------------------------------------------------------------------------------------------------------
+                                <p style="font-weight: bold; font-size: 18px;">註:</p>
+                                <ul>
+                                  <li>鐘點費依其專、兼任聘書職務名稱為基準發給。</li>
+                                  <li>教學助理鐘點費465元</li>
+                                  <li>專任教師鐘點費，每隔學期按五個月致送，致送時間原則上依下列之規定:</li>
+                                  <ol>
+                                    <li>
+                                      一、上學期 : 十月、十一月、十二月、次年元月、二月各致送一學期。
+                                    </li>
+                                    <li>
+                                      二、下學期 :　三月、四月、五月、六月、七月各致送一個月。
+                                    </li>
+                                  </ol>
+                                  <li>兼任教師(含教學助理)鐘點費，每學期按四個半月致送，致送時間原則上依下列之規定:</li>
+
+                                  <li>專任教師鐘點費，每隔學期按五個月致送，致送時間原則上依下列之規定:</li>
+                                  <ol>
+                                    <li>
+                                      一、上學期 : 十月給付半個月鐘點、十一月、十二月、次年元月、二月各致送一學期。
+                                    </li>
+                                    <li>
+                                      二、下學期 :　三月給付半個月鐘點、四月、五月、六月、七月各致送一個月。
+                                    </li>
+                                  </ol>
+                                </ul>
+                              </span>
+
+
+                            </div>
+
+                          </div>
+
+                        </table>
+
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                  <!-- ======= 第二列 ======= -->
+                  <button style="color:tomato; font-weight: bold; font-size: 20px;" class="accordion-button collapsed"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
+                    aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                    #2 電機工程學系
+                  </button>
+                </h2>
+
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                  aria-labelledby="panelsStayOpen-headingTwo">
+                  <div class="accordion-body">
+                    <strong>109學年度下學期資料</strong><br></br>
+                    <!-- ======= 第二列表格 ======= -->
+                    <table class="table table-hover table-rwd">
+                      <thead>
+                        <tr class="tr-only-hide">
+                          <th scope="col">#</th>
+                          <th scope="col">姓名</th>
+                          <th scope="col">職稱</th>
+                          <th scope="col">授課科目</th>
+                          <th scope="col">學分數</th>
+                          <th scope="col">學期</th>
+                          <th scope="col">總終點數</th>
+                          <th scope="col">終點費用</th>
+                          <th scope="col">修正資料</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        </tr>
+
+                        <tr style="color: red;">
+                          <th scope="row" data-th="#">1</th>
+                          <td data-th="姓名">黃**</td>
+                          <td data-th="職稱">助理教授</td>
+                          <td data-th="授課科目">計算機概論</td>
+                          <td data-th="學分數">3</td>
+                          <td data-th="學期">下學期</td>
+                          <td data-th="總終點數">**hr&nbsp;(上限16hr)</td>
+                          <td data-th="鐘點費用">*****</td>
+                          <td data-th="修正資料">
+                            <div style="height: 25px; width: 90px;" class="mb-3">
+                              <input type="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="Error...">
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th scope="row" data-th="#">2</th>
+                          <td data-th="姓名">楊**</td>
+                          <td data-th="職稱">助理教授</td>
+                          <td data-th="授課科目">電子電路學</td>
+                          <td data-th="學分數">3</td>
+                          <td data-th="學期">下學期</td>
+                          <td data-th="總終點數">**hr</td>
+                          <td data-th="鐘點費用">*****</td>
+                          <td data-th="修正資料">
+                            無
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th scope="row" data-th="#">3</th>
+                          <td data-th="姓名">張**</td>
+                          <td data-th="職稱">助理教授</td>
+                          <td data-th="授課科目">統計學</td>
+                          <td data-th="學分數">3</td>
+                          <td data-th="學期">下學期</td>
+                          <td data-th="總終點數">**hr</td>
+                          <td data-th="鐘點費用">*****</td>
+                          <td data-th="修正資料">
+                            無
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th scope="row" data-th="#">4</th>
+                          <td data-th="姓名">楊**</td>
+                          <td data-th="職稱">講師</td>
+                          <td data-th="授課科目">物理學</td>
+                          <td data-th="學分數">2</td>
+                          <td data-th="學期">下學期</td>
+                          <td data-th="總終點數">**hr</td>
+                          <td data-th="鐘點費用">*****</td>
+                          <td data-th="修正資料">
+                            無
+                          </td>
+                        </tr>
+
+                        <tr style="color: red;">
+                          <th scope="row" data-th="#">5</th>
+                          <td data-th="姓名">黃**</td>
+                          <td data-th="職稱">講師</td>
+                          <td data-th="授課科目">系統晶片設計</td>
+                          <td data-th="學分數">2</td>
+                          <td data-th="學期">下學期</td>
+                          <td data-th="總終點數">**hr&nbsp;(上限16hr)</td>
+                          <td data-th="鐘點費用">*****</td>
+                          <td data-th="修正資料">
+                            <div style="height: 30px; width: 90px;" class="mb-3">
+                              <input type="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="Error...">
+                            </div>
+                          </td>
+                        </tr>
+                        <!-- ======= 第二列(錯誤回報) ======= -->
+                        <table>
+                          <center>
+
+                            <p>
+                              <button class="btn  btn-success" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                查看鐘點費計算方式
+                              </button>
+                              <button type="submit" class="btn btn-primary">送出</button>
+                          </center>
+                          </p>
+                          <div class="collapse" id="collapseExample">
+                            <div class="card card-body">
+                              <span style="padding-left: 7%; padding-right: 7%;">
+                                <p style="font-weight: bold; font-size: 19px;">日間部</p>
+                                <ul>
+                                  <li>教授(專任) : 920 / 教授(兼任) : 955</li>
+                                  <li>副教授(專任) : 795 / 副教授(兼任) : 825</li>
+                                  <li>助理教授(專任) : 735 / 助理教授(兼任) : 765</li>
+                                  <li>講師(專任) : 660 / 講師(兼任) : 695</li>
+                                </ul>
+                                -------------------------------------------------------------------------------------------------------------
+
+                                <p style="font-weight: bold; font-size: 18px;">夜間部</p>
+                                <ul>
+                                  <li>教授(專任) : 950 / 教授(兼任) : 995</li>
+                                  <li>副教授(專任) : 815 / 副教授(兼任) : 850</li>
+                                  <li>助理教授(專任) : 760 / 助理教授(兼任) : 800</li>
+                                  <li>講師(專任) : 700 / 講師(兼任) : 740</li>
+                                </ul>
+                                -------------------------------------------------------------------------------------------------------------
+                                <p style="font-weight: bold; font-size: 18px;">註:</p>
+                                <ul>
+                                  <li>鐘點費依其專、兼任聘書職務名稱為基準發給。</li>
+                                  <li>教學助理鐘點費465元</li>
+                                  <li>專任教師鐘點費，每隔學期按五個月致送，致送時間原則上依下列之規定:</li>
+                                  <ol>
+                                    <li>
+                                      一、上學期 : 十月、十一月、十二月、次年元月、二月各致送一學期。
+                                    </li>
+                                    <li>
+                                      二、下學期 :　三月、四月、五月、六月、七月各致送一個月。
+                                    </li>
+                                  </ol>
+                                  <li>兼任教師(含教學助理)鐘點費，每學期按四個半月致送，致送時間原則上依下列之規定:</li>
+
+                                  <li>專任教師鐘點費，每隔學期按五個月致送，致送時間原則上依下列之規定:</li>
+                                  <ol>
+                                    <li>
+                                      一、上學期 : 十月給付半個月鐘點、十一月、十二月、次年元月、二月各致送一學期。
+                                    </li>
+                                    <li>
+                                      二、下學期 :　三月給付半個月鐘點、四月、五月、六月、七月各致送一個月。
+                                    </li>
+                                  </ol>
+                                </ul>
+                              </span>
+
+
+                            </div>
+
+                          </div>
+
+                        </table>
+
+
+
+                      </tbody>
+                    </table>
+
+                  </div>
+
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                  <button style="color:tomato; font-weight: bold; font-size: 20px;" class="accordion-button collapsed"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
+                    aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                    #3 資訊工程學系
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                  aria-labelledby="panelsStayOpen-headingThree">
+                  <div class="accordion-body">
+                    <strong>109學年度下學期資料</strong><br></br>
+                    <!-- ======= 第三列表格 ======= -->
+                    <table class="table table-hover table-rwd">
+                      <thead>
+                        <tr class="tr-only-hide">
+                          <th scope="col">#</th>
+                          <th scope="col">姓名</th>
+                          <th scope="col">職稱</th>
+                          <th scope="col">授課科目</th>
+                          <th scope="col">學分數</th>
+                          <th scope="col">學期</th>
+                          <th scope="col">總終點數</th>
+                          <th scope="col">終點費用</th>
+                          <th scope="col">修正資料</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        </tr>
+                        <tr>
+                          <th scope="row" data-th="#">1</th>
+                          <td data-th="姓名">李**</td>
+                          <td data-th="職稱">助理教授</td>
+                          <td data-th="授課科目">進階程式設計</td>
+                          <td data-th="學分數">3</td>
+                          <td data-th="學期">下學期</td>
+                          <td data-th="總終點數">**hr</td>
+                          <td data-th="終點費用">*****</td>
+                          <td data-th="資料修正">
+                            無
+                          </td>
+                        </tr>
+
+                        <tr style="color: red;">
+                          <th scope="row" data-th="#">2</th>
+                          <td data-th="姓名">邱**</td>
+                          <td data-th="職稱">助理教授</td>
+                          <td data-th="授課科目">微積分</td>
+                          <td data-th="學分數">3</td>
+                          <td data-th="學期">下學期</td>
+                          <td data-th="總終點數">**hr&nbsp;(上限16hr)</td>
+                          <td data-th="終點費用">*****</td>
+                          <td data-th="資料修正">
+                            <div style="height: 25px; width: 90px;" class="mb-3">
+                              <input type="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="Error...">
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th scope="row" data-th="#">3</th>
+                          <td data-th="姓名">林**</td>
+                          <td data-th="職稱">助理教授</td>
+                          <td data-th="授課科目">大數據分析</td>
+                          <td data-th="學分數">2</td>
+                          <td data-th="學期">下學期</td>
+                          <td data-th="總終點數">**hr</td>
+                          <td data-th="終點費用">*****</td>
+                          <td data-th="資料修正">
+                            無
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th scope="row" data-th="#">4</th>
+                          <td data-th="姓名" >彭**</td>
+                          <td data-th="職稱">助理教授</td>
+                          <td data-th="授課科目">資料庫管理</td>
+                          <td data-th="學分數">3</td>
+                          <td data-th="學期">下學期</td>
+                          <td data-th="總終點數">**hr</td>
+                          <td data-th="終點費用">*****</td>
+                          <td data-th="資料修正">
+                            無
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th scope="row" data-th="#">5</th>
+                          <td data-th="姓名" >盧**</td>
+                          <td data-th="職稱">講師</td>
+                          <td data-th="授課科目">系統分析</td>
+                          <td data-th="學分數">2</td>
+                          <td data-th="學期">下學期</td>
+                          <td data-th="總終點數">**hr</td>
+                          <td data-th="終點費用">*****</td>
+                          <td data-th="資料修正">
+                            無
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th scope="row" data-th="#">6</th>
+                          <td  data-th="姓名">張**</td>
+                          <td data-th="職稱">助理教授</td>
+                          <td data-th="授課科目">統計學</td>
+                          <td data-th="學分數">3</td>
+                          <td data-th="學期">下學期</td>
+                          <td data-th="總終點數">**hr</td>
+                          <td data-th="終點費用">*****</td>
+                          <td data-th="資料修正">
+                            無
+                          </td>
+                        </tr>
+                        <!-- ======= 第一列(錯誤回報) ======= -->
+
+                        <table>
+                          <center>
+
+                            <p>
+                              <button class="btn  btn-success" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                查看鐘點費計算方式
+                              </button>
+                              <button type="submit" class="btn btn-primary">送出</button>
+                          </center>
+
+                          </p>
+                          <div class="collapse" id="collapseExample">
+                            <div class="card card-body">
+                              <span style="padding-left: 7%; padding-right: 7%;">
+                                <p style="font-weight: bold; font-size: 19px;">日間部</p>
+                                <ul>
+                                  <li>教授(專任) : 920 / 教授(兼任) : 955</li>
+                                  <li>副教授(專任) : 795 / 副教授(兼任) : 825</li>
+                                  <li>助理教授(專任) : 735 / 助理教授(兼任) : 765</li>
+                                  <li>講師(專任) : 660 / 講師(兼任) : 695</li>
+                                </ul>
+                                -------------------------------------------------------------------------------------------------------------
+
+                                <p style="font-weight: bold; font-size: 18px;">夜間部</p>
+                                <ul>
+                                  <li>教授(專任) : 950 / 教授(兼任) : 995</li>
+                                  <li>副教授(專任) : 815 / 副教授(兼任) : 850</li>
+                                  <li>助理教授(專任) : 760 / 助理教授(兼任) : 800</li>
+                                  <li>講師(專任) : 700 / 講師(兼任) : 740</li>
+                                </ul>
+                                -------------------------------------------------------------------------------------------------------------
+                                <p style="font-weight: bold; font-size: 18px;">註:</p>
+                                <ul>
+                                  <li>鐘點費依其專、兼任聘書職務名稱為基準發給。</li>
+                                  <li>教學助理鐘點費465元</li>
+                                  <li>專任教師鐘點費，每隔學期按五個月致送，致送時間原則上依下列之規定:</li>
+                                  <ol>
+                                    <li>
+                                      一、上學期 : 十月、十一月、十二月、次年元月、二月各致送一學期。
+                                    </li>
+                                    <li>
+                                      二、下學期 :　三月、四月、五月、六月、七月各致送一個月。
+                                    </li>
+                                  </ol>
+                                  <li>兼任教師(含教學助理)鐘點費，每學期按四個半月致送，致送時間原則上依下列之規定:</li>
+
+                                  <li>專任教師鐘點費，每隔學期按五個月致送，致送時間原則上依下列之規定:</li>
+                                  <ol>
+                                    <li>
+                                      一、上學期 : 十月給付半個月鐘點、十一月、十二月、次年元月、二月各致送一學期。
+                                    </li>
+                                    <li>
+                                      二、下學期 :　三月給付半個月鐘點、四月、五月、六月、七月各致送一個月。
+                                    </li>
+                                  </ol>
+                                </ul>
+                              </span>
+
+
+                            </div>
+
+                          </div>
+
+                        </table>
+
+
+
+                      </tbody>
+                    </table>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <article class="entry entry-single">
+
+
+              <div class="entry-footer">
+
+                <div class="d-grid gap-2 col-6 mx-auto">
+                  <button class="btn btn-danger" type="button"><a style="color: azure;"
+                      href="fig.html">資料確認完畢，產生年度報表!</a></button>
+                </div>
+              </div>
+
+            </article><!-- End blog entry -->
+
+
+
+
+          </div><!-- End blog entries list -->
+
+
+          <div class="col-lg-4">
+
+            <div class="sidebar">
+
+              <h3 class="sidebar-title">Search</h3>
+              <div class="sidebar-item search-form">
+                <form action="">
+                  <input type="text">
+                  <button type="submit"><i class="bi bi-search"></i></button>
+                </form>
+              </div><!-- End sidebar search formn-->
+
+
+              <h3 class="sidebar-title">輔仁大學辦公室網站</h3>
+              <div class="sidebar-item recent-posts">
+                <div class="post-item clearfix">
+                  <img src="assets/img/jmt 2.jpg" alt="">
+                  <h4><a href="http://www.hr.fju.edu.tw/" target="_blank">人事室</a></h4>
+                  <time datetime="2020-01-01">phone: (02)2905-2206</time>
+                </div>
+
+
+
+                <div class="post-item clearfix">
+                  <img src="assets/img/FJU_MD01.jpg" alt="">
+                  <h4><a href="http://www.secretariat.fju.edu.tw/#&panel1-1" target="_blank">秘書室</a></h4>
+                  <time datetime="2020-01-01">phone: (02)2905-2204</time>
+                </div>
+
+
+                <div class="post-item clearfix">
+                  <img src="assets/img/sst2.jpg" alt="">
+                  <h4><a href="https://www.fju.edu.tw/administration.jsp?labelID=1" target="_blank">各行政服務</a></h4>
+                  <time datetime="2020-01-01">phone: 詳見各處室</time>
+                </div>
+
+              </div><!-- End sidebar recent posts-->
+
+              <h3 class="sidebar-title">輔仁大學系所網站/連絡電話</h3>
+              <div class="sidebar-item categories">
+                <ul>
+                  <li><a style="font-weight: bold; font-size: 15px; color: #fe825a;" target="_blank"
+                      href="http://www.jp.fju.edu.tw/layout/oneblue/vvindex.jsp">管理學院</a></li>
+                  <li><a target="_blank" href="http://www.im.fju.edu.tw/">資訊管理學系<span>(02)2905-2652</span></a></li>
+                  <li><a target="_blank"
+                      href="http://www.management.fju.edu.tw/subweb/mba/">企業管理學系<span>(02)2905-2659</span></a></li>
+                  <li><a target="_blank" href="http://bba.fib.fju.edu.tw/">金融與國際企業學系<span>(02)2905-2664</span></a></li>
+
+                  <li><a style="font-weight: bold; font-size: 15px; color: #fe825a;" target="_blank"
+                      href="http://www.cfl.fju.edu.tw/about-academics.asp">外國語文學院</a></li>
+                  <li><a target="_blank" href="http://english.fju.edu.tw/">英國語文學系<span>(02)2905-3719</span></a></li>
+                  <li><a target="_blank" href="http://www.de.fju.edu.tw/">德國語文學系<span>(02)2905-2578</span></a></li>
+                  <li><a target="_blank"
+                      href="http://www.jp.fju.edu.tw/layout/oneblue/vvindex.jsp">日本語文學系<span>(02)2905-3729</span></a>
+                  </li>
+
+                  <li><a style="font-weight: bold; font-size: 15px; color: #fe825a;" target="_blank"
+                      href="http://www.educ.fju.edu.tw/">教育學院</a></li>
+                  <li><a target="_blank" href="http://www.cfs.fju.edu.tw/">兒童與家庭學系<span>(02)2905-3604</span></a></li>
+                  <li><a target="_blank" href="http://web.lins.fju.edu.tw/chi/">圖書資訊學系<span>(02)2905-2333</span></a>
+                  </li>
+                  <li><a target="_blank" href="https://www.phed.fju.edu.tw/">體育學系<span>(02)2905-3258</span></a></li>
+                </ul>
+              </div><!-- End sidebar categories-->
+              <h3 class="sidebar-title">其他</h3>
+              <div class="sidebar-item tags">
+                <ul>
+                  <li><a target="blank" href="http://www.academic.fju.edu.tw/">教務處</a></li>
+                  <li><a target="blank" href="http://www.dsa.fju.edu.tw/">學務處</a></li>
+                  <li><a target="blank" href="http://www.ga.fju.edu.tw/">總務處</a></li>
+                  <li><a target="blank" href="http://www.acc.fju.edu.tw/#&panel1-1">會計室</a></li>
+                  <li><a target="blank" href="http://www.audit.fju.edu.tw/">稽核室</a></li>
+
+                </ul>
+              </div><!-- End sidebar tags-->
+
+            </div><!-- End sidebar -->
+
+
+          </div><!-- End blog sidebar -->
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Single Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 footer-contact">
+            <h3>FJCU</h3>
+            <p>
+              242062 <br>
+              新北市新莊區<br>
+              中正路510號 <br><br>
+              <strong>Phone:</strong> (02) 29052000<br>
+              <strong>Email:</strong> pubwww@mail.fju.edu.tw<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>網站連結</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.fju.edu.tw/" target="_blank">輔仁大學</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.fju.edu.tw/administration.jsp?labelID=1"
+                  target="_blank">各行政服務</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://www.hr.fju.edu.tw/" target="_blank">人事室</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://www.secretariat.fju.edu.tw/#&panel1-1"
+                  target="_blank">秘書室</a></li>
+            </ul>
+          </div>
+
+          <style>
+            .videobox {
+              position: relative;
+              width: 100%;
+              height: 0;
+              padding-bottom: 56.25%;
+            }
+
+            .videobox iframe {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            }
+
+            .videobox embed {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            }
+          </style>
+
+          <div class="col-lg-5 col-md-12 footer-newsletter">
+            <h4>輔仁大學</h4>
+            <div class="viewbox">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14459.744485496425!2d121.4323211!3d25.0362418!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe342a67d6574f896!2z5aSp5Li75pWZ6LyU5LuB5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1623482749375!5m2!1szh-TW!2stw"
+                allowfullscreen="true" loading="lazy">
+              </iframe>
+            </div>
+            <br>
+            <p>開學作息時間: 每週一～週五/日間部 08:00~12:00, 13:00~16:30 /進修部 15:00~22:00</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>FJCU</span></strong>
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flattern-multipurpose-bootstrap-template/ -->
+          Designed by <a href="http://www.im.fju.edu.tw/" target="_blank">FJUIM</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+          crossorigin="anonymous"></script>
+        <a href="https://www.facebook.com/FuJenCatholicUniversity" target="blank" class="facebook"><i
+            class="bx bxl-facebook"></i></a>
+        <a href="https://www.instagram.com/fujencatholicuniversity/?igshid=1hey6zr1zya71" target="blank"
+          class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.google.com/search?q=%E8%BC%94%E4%BB%81%E5%A4%A7%E5%AD%B8&oq=%E8%BC%94%E4%BB%81%E5%A4%A7%E5%AD%B8&aqs=chrome.0.69i59j35i39j0i433j0i131i433j0j69i61l3.6942j0j4&sourceid=chrome&ie=UTF-8"
+          target="blank" class="google-plus"><i class="fab fa-google"></i></a>
+
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <title>年度報表</title>
+
+    <script>
+        google.charts.load('current', { packages: ['corechart', 'bar'] });
+        google.charts.setOnLoadCallback(drawRightY);
+
+        function drawRightY() {
+            var data = google.visualization.arrayToDataTable([
+                ['私校退儲校退校付額', '108年', '109年'],
+                ['教師', 389155, 374658],
+                ['其他職員', 587940, 584591]
+            ]);
+
+            var materialOptions = {
+                chart: {
+                    title: '私校退儲校退校付額',
+                },
+                hAxis: {
+                    title: '金額',
+                    minValue: 0,
+                },
+                vAxis: {
+                    title: '類別'
+                },
+                bars: 'horizontal',
+                axes: {
+                    y: {
+                        0: { side: 'right' }
+                    }
+                }
+            };
+            var materialChart = new google.charts.Bar(document.getElementById('chart_div'));
+            materialChart.draw(data, materialOptions);
+        }
+    </script>
+
+    <script>
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['類別', '人數'],
+                ['教師', 102],
+                ['其他職員', 548],
+            ]);
+
+            var options = {
+                title: '109私校退儲校退校付額'
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1 align = "center">私校退儲校退校付額</h1>
+    <div id="chart_div" style="width: 1000px; height: 250px;"></div>
+
+    <div id="piechart" style="width: 1000px; height: 250px;"></div>
+</body>
+
+</html>

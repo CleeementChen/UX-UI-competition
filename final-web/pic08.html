@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <title>年度報表</title>
+
+    <script>
+        google.charts.load('current', { packages: ['corechart', 'bar'] });
+        google.charts.setOnLoadCallback(drawRightY);
+
+        function drawRightY() {
+            var data = google.visualization.arrayToDataTable([
+                ['類別', '108年', '109年'],
+                ['勞保校付', 2289155, 2974258],
+                ['勞健保校付', 2587940, 2784691],
+                ['公保校付', 2587540, 2744591],
+                ['公健保校付', 2687940, 2782591]
+            ]);
+
+            var materialOptions = {
+                chart: {
+                    title: '勞保校付/勞健保校付/公保校付/公健保校付',
+                },
+                hAxis: {
+                    title: '金額',
+                    minValue: 0,
+                },
+                vAxis: {
+                    title: '類別'
+                },
+                bars: 'horizontal',
+                axes: {
+                    y: {
+                        0: { side: 'right' }
+                    }
+                }
+            };
+            var materialChart = new google.charts.Bar(document.getElementById('chart_div'));
+            materialChart.draw(data, materialOptions);
+        }
+    </script>
+
+    <script>
+        google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['種類', '人數'],
+          ['勞保校付',     475],
+          ['勞健保校付',      389],
+          ['公保校付',  375],
+          ['公健保校付', 366],
+        ]);
+
+        var options = {
+          title: '109投保人數占比'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+</head>
+
+<body>
+    <h1 align = "center">勞保校付/勞健保校付/公保校付/公健保校付</h1>
+    <div id="chart_div" style="width: 1000px; height: 250px;"></div>
+
+    <div id="piechart" style="width: 1000px; height: 250px;"></div>
+</body>
+
+</html>

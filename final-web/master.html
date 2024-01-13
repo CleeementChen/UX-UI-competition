@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['', '107年', '108年', '109年'],
+          ['兼任主管', 103, 121, 114],
+          ['兼任約聘人員', 76, 83, 91],
+        
+        ]);
+
+        var options = {
+          chart: {
+            
+            subtitle: '兼任主管/兼任約聘',
+          },
+          bars: 'horizontal' // Required for Material Bar Charts.
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+  </head>
+  <body>
+    <h1 align="center">兼任主管/兼任約聘人員</h1>
+    <div id="barchart_material" style="width: 900px; height: 250px;"></div>
+  </body>
+</html>

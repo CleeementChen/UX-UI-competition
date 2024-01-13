@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>年度報表</title>
+    <style>
+        .nav {
+            position: absolute;
+            width: 60%;
+            height: 600px;
+            top: 100px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: white;
+        }
+
+        .main {
+            position: absolute;
+            width: 40%;
+            height: 300px;
+            top: 100px;
+            right: 0;
+            bottom: 0;
+            left: 60%;
+            background-color: white;
+        }
+
+        .footer {
+            position: absolute;
+            width: 40%;
+            height: 300px;
+            top: 400px;
+            right: 0;
+            bottom: 0;
+            left: 60%;
+          ;
+            background-color: white;
+        }
+    </style>
+     <!--引用css-->
+     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+     <style>
+         .co{
+             background-color: #ff8040bd;
+             
+         }
+         .pa{
+             padding-top: 2%;
+             padding-left: 2%;
+             padding-right: 2%;
+             padding-bottom: 2%;
+             text-align: center;
+         }
+         .papa{
+             padding-top: 2%;
+             padding-left: 2%;
+             padding-right: 2%;
+             padding-bottom: 2%;
+         }
+         
+ 
+     </style>
+     <!--引用jQuery-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <!--引用dataTables.js-->
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+    <script type="text/javascript">
+
+        $(function () {
+            $("#myDataTalbe").DataTable({
+                searching: false, //關閉filter功能
+                columnDefs: [{
+                targets: [3],
+                orderable: false,
+                
+                }]
+                
+            });
+        });
+
+  
+    </script>
+    <style>
+    @media (min-width: 1024px) {
+        .ab {
+         width: 60%;
+         height: 100%;
+        
+        }
+        .cd {
+         width: 40%;
+         height: 50%;
+         
+        }
+         }
+         
+         
+    </style>
+</head>
+
+<body>
+   <h1 align="center">兼任教師鐘點費</h1>
+    <div class="nav ab">
+      
+        <table id="myDataTalbe" class="display pa" style="width: 100%; height: 100%;">
+            <thead class="co">
+                <!--必填-->
+    
+                <tr>
+                    <th>#</th>
+                    <th>所屬科系</th>
+                    <th>姓名</th>
+                    <th>職位職稱</th>
+                    <th>授課科目</th>
+                    <th>總終點數</th>
+                    <th>鐘點費用</th>
+                    <th>總鐘點費用</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>資訊管理系</td>
+                    <td>陳**</td>
+                    <td>助理教授</td>
+                    <td>分積分</td>
+                    <td>**hr</td>
+                    <td>***</td>
+                    <td>****</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>資訊管理系</td>
+                    <td>張**</td>
+                    <td>助理教授</td>
+                    <td>程式設計</td>
+                    <td>**hr</td>
+                    <td>***</td>
+                    <td>****</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>資訊管理系</td>
+                    <td>胡**</td>
+                    <td>助理教授</td>
+                    <td>會計學</td>
+                    <td>**hr</td>
+                    <td>***</td>
+                    <td>****</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>西班牙語文學系</td>
+                    <td>陳**</td>
+                    <td>助理教授</td>
+                    <td>會話課</td>
+                    <td>**hr</td>
+                    <td>***</td>
+                    <td>****</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>資訊工程學系</td>
+                    <td>彭**</td>
+                    <td>助理教授</td>
+                    <td>計算機概論</td>
+                    <td>**hr</td>
+                    <td>***</td>
+                    <td>****</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>西班牙語文學系</td>
+                    <td>黃**</td>
+                    <td>助理教授</td>
+                    <td>翻譯課</td>
+                    <td>**hr</td>
+                    <td>***</td>
+                    <td>****</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>電機工程學系</td>
+                    <td>吳**</td>
+                    <td>助理教授</td>
+                    <td>電子電路學</td>
+                    <td>**hr</td>
+                    <td>***</td>
+                    <td>****</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>資訊管理學系</td>
+                    <td>劉**</td>
+                    <td>助理教授</td>
+                    <td>統計學</td>
+                    <td>**hr</td>
+                    <td>***</td>
+                    <td>****</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+    <div class="main cd papa">
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+          google.charts.load('current', {'packages':['line']});
+          google.charts.setOnLoadCallback(drawChart);
+    
+        function drawChart() {
+    
+          var data = new google.visualization.DataTable();
+          data.addColumn('number', '月份');
+          data.addColumn('number', '預算額');
+          data.addColumn('number', '實際支付金額');
+         
+    
+          data.addRows([
+            [1,  290000, 300000.8],
+            [2,  300000.9, 230000.5],
+            [3,  250000.4, 310000.4],
+            [4,  320000.7, 250000.8],
+            [5,  330000.9, 310000.6],
+            [6,  290000.8, 300000.6],
+            [7,  320000.6, 340000.3],
+            [8,  270000.3, 300000.2],
+            [9,  310000.9, 280000.9],
+            [10, 300000.8, 270000.9],
+            [11, 280000.3,  280000.9],
+            [12, 340000.6,  310000.4],
+           
+          ]);
+    
+          var options = {
+            chart: {
+              title: '109學年度',
+              subtitle: '兼任教師鐘點費預算總額'
+            },
+            width: 450,
+            height: 250,
+            axes: {
+              x: {
+                0: {side: 'top'}
+              }
+            }
+          };
+    
+          var chart = new google.charts.Line(document.getElementById('line_top_x'));
+    
+          chart.draw(data, google.charts.Line.convertOptions(options));
+        }
+      </script>
+   
+      <div id="line_top_x"></div>
+    </div>
+    <div class="footer cd pa">
+   
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['', '107學年度', '108學年度', '109學年度'],
+          ['文學院', 19, 18, 20],
+          ['商學院', 11, 14, 10],
+          ['教育學院', 20, 25, 21],
+          ['其他', 50, 53, 49]
+        ]);
+
+        var options = {
+          chart: {
+            title: '107-109學年度',
+            subtitle: '各學院助理教授支付金額比例(百分比)',
+          },
+          bars: 'horizontal' // Required for Material Bar Charts.
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+  
+    <div id="barchart_material" style="width: 450px; height: 250px;"></div>
+ 
+</html>
+
+    </div>
+
+
+</body>
+
+</html>
